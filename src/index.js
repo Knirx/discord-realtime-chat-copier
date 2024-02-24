@@ -1,4 +1,3 @@
-// requires: discord.js-selfbot-v13, axios
 require("dotenv").config()
 const fs = require("fs")
 const { Client } = require("discord.js-selfbot-v13")
