@@ -20,20 +20,7 @@ async function getUserToken(message) {
     }
 }
 
-async function changeStatus(status_text, status, headers) {
-    try {
-        await axios.patch(
-            "https://discord.com/api/v8/users/@me/settings", { status: status, custom_status: { text: status_text } }, { headers: headers }
-          );
-          
-        await functions.sleep(1000);
-    } catch (error) {
-        console.log(error)
-        }
-}
-
 module.exports = {
     headers,
-    getUserToken,
-    changeStatus
+    getUserToken
 }
