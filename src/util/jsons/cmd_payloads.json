@@ -1,10 +1,67 @@
-{
+{   
+    "networth": {
+      "type":2,
+      "application_id":"710143953533403226",
+      "guild_id":"",
+      "channel_id":"",
+      "session_id":"4db501154f52afbe8878f85f98ac5b4c",
+      "data":{
+          "version":"1220147110486216765",
+          "id":"880781494581354514",
+          "name":"networth",
+          "type":1,
+          "options":[
+            {
+               "type":3,
+               "name":"name",
+               "value":""
+            },
+            {
+               "type":3,
+               "name":"profile",
+               "value":""
+            },
+            {
+               "type":3,
+               "name":"date",
+               "value":""
+            }
+         ],
+      "analytics_location":"slash_ui"
+      }
+    },
+    "profile": {
+      "type":2,
+      "application_id":"710143953533403226",
+      "guild_id":"",
+      "channel_id":"",
+      "session_id": "4db501154f52afbe8878f85f98ac5b4c",
+      "data":{
+          "version":"1220147110486216767",
+          "id":"923294195207266314",
+          "name":"profile",
+          "type":1,
+          "options":[
+            {
+                "type":3,
+                "name":"name",
+                "value":""
+            },
+            {
+                "type":3,
+                "name":"profile",
+                "value":""
+            }
+          ],
+      "analytics_location":"slash_ui"
+      }
+    },
     "ap": {
       "type": 2,
       "application_id": "1040668238318669824",
       "guild_id": "",
       "channel_id": "",
-      "session_id": "232f9a5428b5f4a38fa520371d4ce921",
+      "session_id": "4db501154f52afbe8878f85f98ac5b4c",
       "data": {
         "version": "1183822355991113813",
         "id": "1077243778743676948",
@@ -30,7 +87,7 @@
       "application_id": "1040668238318669824",
       "guild_id": "1135299722664493238",
       "channel_id": "1166799539395641404",
-      "session_id": "232f9a5428b5f4a38fa520371d4ce921",
+      "session_id": "4db501154f52afbe8878f85f98ac5b4c",
       "data": {
         "version": "1183822355991113817",
         "id": "1183822355991113809",
@@ -51,7 +108,7 @@
       "application_id": "1040668238318669824",
       "guild_id": "1135299722664493238",
       "channel_id": "1166799539395641404",
-      "session_id": "232f9a5428b5f4a38fa520371d4ce921",
+      "session_id": "4db501154f52afbe8878f85f98ac5b4c",
       "data": {
         "version": "1183822355991113812",
         "id": "1051472179029618779",
@@ -77,7 +134,7 @@
       "application_id": "1040668238318669824",
       "guild_id": "1135299722664493238",
       "channel_id": "1166799539395641404",
-      "session_id": "232f9a5428b5f4a38fa520371d4ce921",
+      "session_id": "4db501154f52afbe8878f85f98ac5b4c",
       "data": {
         "version": "1183822355991113816",
         "id": "1079134013786169415",
@@ -98,7 +155,7 @@
     "application_id": "1040668238318669824",
     "guild_id": "1135299722664493238",
     "channel_id": "1166799539395641404",
-    "session_id": "232f9a5428b5f4a38fa520371d4ce921",
+    "session_id": "4db501154f52afbe8878f85f98ac5b4c",
     "data": {
       "version": "1183822356112740459",
       "id": "1079134013786169416",
@@ -112,7 +169,7 @@
     "application_id": "1040668238318669824",
     "guild_id": "1178407277489819769",
     "channel_id": "1178407277754065010",
-    "session_id": "232f9a5428b5f4a38fa520371d4ce921",
+    "session_id": "4db501154f52afbe8878f85f98ac5b4c",
     "data": {
       "version": "1183822356112740458",
       "id": "1110977427401879657",
@@ -142,7 +199,7 @@
       "application_id": "1040668238318669824",
       "guild_id": "1135299722664493238",
       "channel_id": "1166799539395641404",
-      "session_id": "232f9a5428b5f4a38fa520371d4ce921",
+      "session_id": "4db501154f52afbe8878f85f98ac5b4c",
       "data": {
         "version": "1183822356112740455",
         "id": "1089539990138146876",
@@ -158,13 +215,12 @@
       },
       "analytics_location": "slash_ui"
     },
-  
     "leaderboard": {
       "type": 2,
       "application_id": "1040668238318669824",
       "guild_id": "1135299722664493238",
       "channel_id": "1166799539395641404",
-      "session_id": "232f9a5428b5f4a38fa520371d4ce921",
+      "session_id": "4db501154f52afbe8878f85f98ac5b4c",
       "data": {
         "version": "1183822356112740457",
         "id": "1089539990138146877",
@@ -180,4 +236,4 @@
         "analytics_location": "slash_ui"
       }
     }
-  }
+}

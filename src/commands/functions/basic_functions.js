@@ -1,6 +1,7 @@
 const fs = require("fs")
 const readline = require("readline")
 const config = require("../../util/jsons/config.json")
+const channels = require("../../util/jsons/channel_ids.json")
 
 function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
@@ -8,7 +9,22 @@ function sleep(ms) {
 
 async function replace_mentions(message) {
     const regex = /<@[^>]+>/g;
+    const regex_2 = /<#[^>]+>/g;
+    const regex_3 = /<:[^>]+>/g
+    const regex_4 = /<a:[^>]+>/g
+    return message.content.replace(regex_2, "").replace(regex, "").replace(regex_3, "").replace(regex_4, "").trim()
+}
+
+async function replace_channel_mentions(message) {
+    const regex = /<#[^>]+>/g;
     return message.content.replace(regex, "");
+}
+
+async function replace_emotes(message) {
+    const regex = /<:[^>]+>/g
+    const regex_2 = /<a:[^>]+>/g
+    const new_content = message.content.replace(regex, "")
+    return new_content.replace(regex_2, "")
 }
 
 async function change_json(filePath, key, value) {
@@ -42,7 +58,29 @@ async function read_bottom_line_txt(filePath) {
     });
 
     for await (const line of rl) {
+        await delete_line_from_txt("./src/util/tokens.txt", line)
         return line;
+    }
+}
+
+function base64Decode(str) {
+    return Buffer.from(str, 'base64').toString('utf8');
+}
+
+async function delete_line_from_txt(filePath, lineToDelete) {
+    try {
+        let data = await fs.promises.readFile(filePath, 'utf8');
+        const lines = data.split('\n');
+        const indexToDelete = lines.findIndex(line => line.trim() === lineToDelete.trim());
+        if (indexToDelete !== -1) {
+            lines.splice(indexToDelete, 1);
+            data = lines.join('\n');
+            await fs.promises.writeFile(filePath, data);
+        } else {
+            console.log(`No match found for "${lineToDelete}" in file "${filePath}".`);
+        }
+    } catch (error) {
+        console.error(`Error deleting line from file: ${error}`);
     }
 }
 
@@ -65,9 +103,9 @@ function builer_headers(token) {
 
 function getNewChannelID(old_channel_id, in_channel_ids_key) {
     if (in_channel_ids_key == true) {
-        return config.channel_ids[old_channel_id]
+        return channels[old_channel_id]
     } else {
-        return config[old_channel_id]
+        return channels[old_channel_id]
     }
 }
 
@@ -95,5 +133,9 @@ module.exports = {
     replace_mentions,
     getNewChannelID,
     getEmbedDescription,
-    read_txt_file
+    read_txt_file,
+    delete_line_from_txt,
+    replace_channel_mentions,
+    replace_emotes,
+    base64Decode
 }
