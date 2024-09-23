@@ -5,7 +5,7 @@
 
 I take NO responsibility and/or liability for how you choose to use any of the source code available here. By using any of the files available in this repository, you understand that you are AGREEING TO USE AT YOUR OWN RISK. Once again, ALL files available here are for EDUCATION and/or RESEARCH purposes ONLY.**
 
-### A script that copies any users Message in a server into a new server. 
+### A script that copies any users Message from a server into a new server. 
 
 ### Config and .env
 
